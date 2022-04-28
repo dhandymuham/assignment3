@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <style>
+            h1 {text-align: center;}
+            .center {
+              margin: auto;
+              width: 60%;
+              border: 1px solid rgb(3, 3, 3);
+              padding: 1px;
+            }
+            .water {
+              background-color: rgb(29, 214, 238);
+              color: black;
+              border: 1px solid black;
+              margin: 10px;
+              padding: 1px;
+            }
+            .wind {
+              background-color: rgb(124, 248, 151);
+              color: black;
+              border: 1px solid black;
+              margin: 10px;
+              padding: 1px;
+            }
+            .leftbox {
+                float:left;
+                text-align: center;
+                border: 1px solid black;
+                padding: 50px 0;
+                width:40%;
+                height:200px;
+                margin: 10px;
+            }
+            .bahaya{
+                float:right;
+                background-color: rgb(243, 8, 8);
+                border: 1px solid black;
+                text-align: center;
+                padding: 50px 0;
+                width:40%;
+                height:200px;
+                margin: 10px;
+            }
+            .siaga{
+                float:right;
+                background-color: rgb(240, 175, 54);
+                border: 1px solid black;
+                text-align: center;
+                padding: 50px 0;
+                width:40%;
+                height:200px;
+                margin: 10px;
+            }
+            .aman{
+                float:right;
+                background-color: rgb(13, 223, 13);
+                border: 1px solid black;
+                text-align: center;
+                padding: 50px 0;
+                width:40%;
+                height:200px;
+                margin: 10px;
+            }
+            </style>
+        <title> {{ .title }} </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="15"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="water">
+                <h1 style="font-family:'Times New Roman', Times, serif;font-size:320%"><b>Water</b></h1>
+            </div>
+            <div>
+                <div class="leftbox" style="background-color: rgb(29, 214, 238);">
+                    <b style="font-size:700%;">{{ .datas.Water }} m</b>
+                </div>
+
+                <div class="{{ .datas.StatusWater }}">
+                    <b style="font-size:700%;">{{ .datas.StatusWater }}</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="wind">
+                <h1 style="font-family:'Times New Roman', Times, serif;font-size:320%;"><b>Wind</b></h1>
+            </div>
+            <div>
+                <div class="leftbox" style="background-color: rgb(124, 248, 151);">
+                    <b style="font-size:700%;">{{ .datas.Wind }} m/s</b>
+                </div>
+                <div class="{{ .datas.StatusWind }}">
+                    <b style="font-size:700%;">{{ .datas.StatusWind }}</b>
+                </div>
+            </div>
+        </div>
+
+    </body class="container">
+</html>
